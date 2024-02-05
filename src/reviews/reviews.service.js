@@ -10,10 +10,6 @@ const addCriticDetails = mapProperties({
   cUpdatedAt: "critic.updated_at",
 });
 
-// function selectReviewCritic(critic_id) {
-//   return knex("critics as c").select("*").where("critic_id", critic_id).first();
-// }
-
 function selectReviewCritic(reviewId) {
   return knex("reviews as r")
     .join("critics as c", "r.critic_id", "c.critic_id")

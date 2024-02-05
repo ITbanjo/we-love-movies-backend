@@ -14,7 +14,7 @@ function list() {
   return knex("movies as m")
     .distinct()
     .select(
-      "m.movie_id as id",
+      "m.movie_id",
       "title",
       "runtime_in_minutes",
       "rating",
